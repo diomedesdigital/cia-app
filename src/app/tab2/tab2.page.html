@@ -1,0 +1,21 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="primary">
+    <ion-title>
+      Paste Text File Contents
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <form *ngIf="textForm" [formGroup]="textForm">
+  <ion-item padding>
+    <ion-label position="stacked">Copy and Paste Text File Contents Here</ion-label>
+    <ion-textarea
+      rows="20"
+      formControlName="pastedText"
+      placeholder="Paste Here.">
+    </ion-textarea>
+  </ion-item>
+  <ion-button [disabled]="!textForm.valid" expand="full" color="danger" (click)=processText()>Next</ion-button>
+</form>
+</ion-content>

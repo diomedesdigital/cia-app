@@ -1,0 +1,7 @@
+{
+  "name": "CIA App",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

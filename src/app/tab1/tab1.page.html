@@ -1,0 +1,21 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="primary">
+    <ion-title>
+      Add Keywords Page
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <form *ngIf="keyWordForm" [formGroup]="keyWordForm">
+  <ion-item padding>
+    <ion-label position="stacked">Enter Text, seperate by comma</ion-label>
+    <ion-textarea
+      rows="6"
+      formControlName="keyWords"
+      placeholder="Enter your keywords here.">
+    </ion-textarea>
+  </ion-item>
+  <ion-button [disabled]="!keyWordForm.valid" expand="full" color="secondary" (click)=saveKeyWords()>Next</ion-button>
+</form>
+</ion-content>

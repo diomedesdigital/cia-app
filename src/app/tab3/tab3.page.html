@@ -1,0 +1,21 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="primary">
+    <ion-title>
+      Processed Text File
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <form *ngIf="processedTextForm" [formGroup]="processedTextForm">
+  <ion-item padding>
+    <ion-label position="stacked">Processed Text Below</ion-label>
+    <ion-textarea
+      rows="22"
+      readonly
+      formControlName="newText">
+    </ion-textarea>
+  </ion-item>
+  <ion-button expand="full" color="success" (click)=startOver()>Start Over</ion-button>
+</form>
+</ion-content>
