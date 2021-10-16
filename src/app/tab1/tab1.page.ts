@@ -2,13 +2,14 @@ import { Component } from '@angular/core';
 import { AbstractControl, FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { NavController, NavParams } from '@ionic/angular';
 import { Router } from '@angular/router'
+import { Tab1PageRoutingModule } from './tab1-routing.module';
 
 
 @Component({
   selector: 'app-tab1',
   templateUrl: 'tab1.page.html',
   styleUrls: ['tab1.page.scss'],
-  providers: [NavParams, FormBuilder, Router]
+  providers: [NavParams, FormBuilder]
 })
 export class Tab1Page {
   public keywordList: string[] = [];
